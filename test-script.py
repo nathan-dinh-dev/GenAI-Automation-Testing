@@ -2,7 +2,7 @@ import google.generativeai as genai
 import os
 import time
 from dotenv import load_dotenv
-from test_cases_mixed import test_cases
+from test_cases import test_cases
 from difflib import SequenceMatcher
 
 # Load environment variables from .env file
@@ -25,6 +25,7 @@ correct_count = 0
 retry_limit = 3  # Retry limit for 429 errors
 passed_tests = []
 failed_tests = []
+preprompt = " only need result number no need explain and round a number to two decimal places"
 
 # Helper function for similarity
 def is_similar(a, b, threshold=0.8):
@@ -39,17 +40,18 @@ for test in test_cases:
     while retries <= retry_limit:
         try:
             # Generate response
-            response = model.generate_content(prompt)
+            response = model.generate_content(prompt + preprompt)
             result = response.text.strip()
 
             # Validate response
             if is_similar(result, expected):
-                print(f"Test Passed: {prompt}")
+                print(f"\033[32mTest Passed\033[0m: {prompt}") 
+                print(f"\033[93mExpected\033[0m: {expected}, \033[93mGot\033[0m: {result}\n")
                 correct_count += 1
                 passed_tests.append(prompt)
             else:
-                print(f"Test Failed: {prompt}")
-                print(f"Expected: {expected}, Got: {result}")
+                print(f"\033[31mTest Failed\033[0m: {prompt}")
+                print(f"\033[93mExpected\033[0m: {expected}, \033[93mGot\033[0m: {result}\n")
                 failed_tests.append(prompt)
 
             # Add a delay between requests to avoid hitting quota
