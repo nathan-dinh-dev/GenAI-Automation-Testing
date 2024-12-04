@@ -1,30 +1,31 @@
-# 15 test cases
+#5 test cases
 test_cases = [
-    {"prompt": "Compute the area under the curve y=x^2 over [0,2]", "expected": "2.67"},
-    {"prompt": "What is the volume of the solid obtained by revolving y=x^2 about the x-axis over [0,2]?", "expected": "5.33"},
-    {"prompt": "Compute the area under the curve y=3x^3 over [0,1]", "expected": "0.75"},
-    {"prompt": "What is the volume of the solid obtained by revolving y=3x^3 about the x-axis over [0,1]?", "expected": "0.60"},
-    {"prompt": "Find the area between the curves y=x^2 and y=2x over [0,1]", "expected": "0.33"},
-    {"prompt": "Compute the area under the curve y=sin(x) over [0,pi]", "expected": "2.00"},
-    {"prompt": "What is the volume of the solid obtained by revolving y=sin(x) about the x-axis over [0,pi]?", "expected": "4.93"},
-    {"prompt": "Find the area under the curve y=e^x over [0,1]", "expected": "1.72"},
-    {"prompt": "Compute the area between y=e^x and y=x over [0,1]", "expected": "0.95"},
-    {"prompt": "What is the volume of the solid obtained by revolving y=x^3 about the y-axis over [0,2]?", "expected": "50.27"},
-    {"prompt": "Find the area under the curve y=ln(x) over [1,e]", "expected": "1.00"},
-    {"prompt": "Compute the area under the curve y=1/x over [1,2]", "expected": "0.69"},
-    {"prompt": "What is the volume of the solid obtained by revolving y=ln(x) about the x-axis over [1,e]?", "expected": "4.39"},
-    {"prompt": "Find the area between the curves y=cos(x) and y=sin(x) over [0,pi/4]", "expected": "0.11"},
-    {"prompt": "Compute the volume of the solid obtained by revolving y=1/(x^2) about the x-axis over [1,2]", "expected": "0.20"},
-    # {"prompt": "Find the area under the curve y=cos(x) over [0,pi/2]", "expected": "1.00"},
-    # {"prompt": "Compute the area under the curve y=x^4 over [0,1]", "expected": "0.20"},
-    # {"prompt": "What is the volume of the solid obtained by revolving y=sqrt(x) about the x-axis over [0,4]?", "expected": "21.33"},
-    # {"prompt": "Compute the area under the curve y=2^x over [0,1]", "expected": "1.44"},
-    # {"prompt": "What is the volume of the solid obtained by revolving y=2^x about the x-axis over [0,1]?", "expected": "4.44"},
-    # {"prompt": "Find the area under the curve y=tan(x) over [0,pi/4]", "expected": "0.35"},
-    # {"prompt": "Compute the area between the curves y=ln(x) and y=1/x over [1,e]", "expected": "0.72"},
-    # {"prompt": "What is the volume of the solid obtained by revolving y=1/(1+x^2) about the x-axis over [0,1]?", "expected": "3.14"},
-    # {"prompt": "Find the area under the curve y=arctan(x) over [0,1]", "expected": "0.66"},
-    # {"prompt": "Compute the volume of the solid obtained by revolving y=arctan(x) about the x-axis over [0,1]?", "expected": "0.44"},
-    # {"prompt": "Find the area under the curve y=x^2+1 over [0,1]", "expected": "1.33"},
-    # {"prompt": "Compute the area under the curve y=1/(1+x^2) over [0,1]", "expected": "0.88"}
+    {"prompt": "Find the derivative of the function, F(x) = (x^4 + 3x^2 - 2)^5. ", 
+     "expected": "$5(x^4 + 3x^2 - 2)^4(4x^3 + 6x)$"},
+    {"prompt": "Differentiate the function, f(x) = 2^40. ", 
+     "expected": "$0$"},
+    {"prompt": "Differentiate g(t) = t^3 cos t.", 
+    "expected": "$3t^2\cos t - t^3\sin t$"},
+    {"prompt": "Find dy/dx by implicit differentiation for x^3 + y^3 = 1.", 
+     "expected": "$-x^2/y^2$"},
+    {"prompt": "Find the linearization L(x) of the function at a = -1 for f(x) = x^4 + 3x^2.", 
+     "expected": "$L(x) = -10x - 6$"},
+    
+    # Integration Test Cases
+    {"prompt": "Compute the definite integral of y=3x^2 over [1,3]", "expected": "26"},
+    {"prompt": "What is the volume of the solid obtained by revolving y=x^3 about the x-axis over [1,2]?", "expected": "(127π)/7"},
+    {"prompt": "Find the area under the curve y=sin(x) over [0,π]", "expected": "2"},
+
+    # Application of Differentiation Test Cases
+    {"prompt": "Find the maximum value of f(x) = -x^2 + 4x + 5 over x ∈ [0,5]", "expected": "9"},
+    {"prompt": "Determine the slope of the tangent line to the curve y=ln(x) at x=e ", "expected": "1/e"},
+
+    # Additional Integration Test Cases
+    {"prompt": "Compute the definite integral of y=ln(x) over [1,e^2]", "expected": "e^2 + 1"},
+    {"prompt": "What is the volume of the solid obtained by revolving y=cos(x) about the x-axis over [0, π/2]?", "expected": "(π^2)/4"},
+    {"prompt": "Find the area under the curve y=1/(1 + x^2) over [0,1]", "expected": "π/4"},
+
+    # Additional Application of Differentiation Test Cases
+    {"prompt": "Find the maximum value of f(x) = x * e^(-x) over x ∈ [0, ∞)", "expected": "1/e"},
+    {"prompt": "Determine the slope of the tangent line to the curve y=√x at x=4", "expected": "0.25"}
 ]
