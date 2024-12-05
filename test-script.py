@@ -13,9 +13,7 @@ import re
 load_dotenv()
 
 # Define API keys directly 
-api_keys = [
-   "Gemini keys"
-]
+api_keys = ["Gemini keys"]
 
 # Remove any None values in case some environment variables are not set
 api_keys = [key for key in api_keys if key]
@@ -63,6 +61,13 @@ preprompts = {
         "Do not provide explanations."
         "Don't write like this: 5(x^4 + 3x^2 - 2)^4(4x^3 + 6x) but this: 5(x^4+3x^2-2)^4(4x^3+6x) no space in between and no next line"
     ),
+    "Inverse Functions": (
+    "Only provide the exact numerical result, keep 'e' and 'π' as symbolic constants if they appear. "
+    "Do not provide explanations."
+    "Don't write like this: 5(x^4 + 3x^2 - 2)^4(4x^3 + 6x) but this: 5(x^4+3x^2-2)^4(4x^3+6x) no space in between."
+    "If any answer is infinity, write it as 'infinity' or '-infinity' for negative infinity."
+    "Less than or equal to should be written as <=."
+    "Leave irrational functions as irrational.")
 }
 
 # Helper function for similarity using sympy
@@ -207,13 +212,15 @@ for chapter in test_cases:
                 # Validate response
                 test_passed = is_equivalent(result, expected)
 
-                if expected == result:
-                    color = Fore.GREEN
+                # Use the test_passed variable to set the color
+                if test_passed:
+                  color = Fore.GREEN
                 else:
-                    color = Fore.RED
+                  color = Fore.RED
 
                 # Only color the 'Test Passed' or 'Test Failed' text
                 print(f"{color}Test {'Passed' if test_passed else 'Failed'}{Style.RESET_ALL}: {prompt} (Expected: {expected}, Got: {result})")
+
 
                 if test_passed:
                     correct_count += 1
