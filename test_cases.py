@@ -518,5 +518,36 @@ test_cases = [
                 "expected": "infinity"
             },
         ]
+    },
+{
+        "chapter": "Applications of Integrals",
+        "tester": "Nathan",
+        "cases": [
+            {"test_case_id": "TC_APP_INT_001", "description": "Compute the area under the curve y=x^2 over [0,2]", "prompt": "Compute the area under the curve y=x^2 over [0,2]", "expected": "2.67"},
+            {"test_case_id": "TC_APP_INT_002", "description": "What is the volume of the solid obtained by revolving y=x^2 about the x-axis over [0,2]?", "prompt": "What is the volume of the solid obtained by revolving y=x^2 about the x-axis over [0,2]?", "expected": "5.33"},
+            {"test_case_id": "TC_APP_INT_003", "description": "Compute the area under the curve y=3x^3 over [0,1]", "prompt": "Compute the area under the curve y=3x^3 over [0,1]", "expected": "0.75"},
+            {"test_case_id": "TC_APP_INT_004", "description": "What is the volume of the solid obtained by revolving y=3x^3 about the x-axis over [0,1]?", "prompt": "What is the volume of the solid obtained by revolving y=3x^3 about the x-axis over [0,1]?", "expected": "0.60"},
+            {"test_case_id": "TC_APP_INT_005", "description": "Find the area between the curves y=x^2 and y=2x over [0,1]", "prompt": "Find the area between the curves y=x^2 and y=2x over [0,1]", "expected": "0.33"},
+            {"test_case_id": "TC_APP_INT_006", "description": "Compute the area under the curve y=sin(x) over [0,pi]", "prompt": "Compute the area under the curve y=sin(x) over [0,pi]", "expected": "2.00"},
+            {"test_case_id": "TC_APP_INT_007", "description": "What is the volume of the solid obtained by revolving y=sin(x) about the x-axis over [0,pi]?", "prompt": "What is the volume of the solid obtained by revolving y=sin(x) about the x-axis over [0,pi]?", "expected": "4.93"},
+            {"test_case_id": "TC_APP_INT_008", "description": "Find the area under the curve y=e^x over [0,1]", "prompt": "Find the area under the curve y=e^x over [0,1]", "expected": "1.72"},
+            {"test_case_id": "TC_APP_INT_009", "description": "Compute the area between y=e^x and y=x over [0,1]", "prompt": "Compute the area between y=e^x and y=x over [0,1]", "expected": "0.95"},
+            {"test_case_id": "TC_APP_INT_010", "description": "What is the volume of the solid obtained by revolving y=x^3 about the y-axis over [0,2]?", "prompt": "What is the volume of the solid obtained by revolving y=x^3 about the y-axis over [0,2]?", "expected": "50.27"},
+            {"test_case_id": "TC_APP_INT_011", "description": "Find the area under the curve y=ln(x) over [1,e]", "prompt": "Find the area under the curve y=ln(x) over [1,e]", "expected": "1.00"},
+            {"test_case_id": "TC_APP_INT_012", "description": "Compute the area under the curve y=1/x over [1,2]", "prompt": "Compute the area under the curve y=1/x over [1,2]", "expected": "0.69"},
+            {"test_case_id": "TC_APP_INT_013", "description": "What is the volume of the solid obtained by revolving y=ln(x) about the x-axis over [1,e]?", "prompt": "What is the volume of the solid obtained by revolving y=ln(x) about the x-axis over [1,e]?", "expected": "4.39"},
+            {"test_case_id": "TC_APP_INT_014", "description": "Find the area between the curves y=cos(x) and y=sin(x) over [0,pi/4]", "prompt": "Find the area between the curves y=cos(x) and y=sin(x) over [0,pi/4]", "expected": "0.11"},
+            {"test_case_id": "TC_APP_INT_015", "description": "Compute the volume of the solid obtained by revolving y=1/(x^2) about the x-axis over [1,2]", "prompt": "Compute the volume of the solid obtained by revolving y=1/(x^2) about the x-axis over [1,2]", "expected": "0.20"},
+            {"test_case_id": "TC_APP_INT_016", "description": "Compute the work done by a variable force F(x) = 3x^2 from x=0 to x=2", "prompt": "Compute the work done by a variable force F(x) = 3x^2 from x=0 to x=2", "expected": "8.00"},
+            {"test_case_id": "TC_APP_INT_017", "description": "Find the area under the curve y=1/x^2 over [1,3]", "prompt": "Find the area under the curve y=1/x^2 over [1,3]", "expected": "0.67"},
+            {"test_case_id": "TC_APP_INT_018", "description": "What is the volume of the solid obtained by revolving y=cos(x) about the x-axis over [0,pi/2]?", "prompt": "What is the volume of the solid obtained by revolving y=cos(x) about the x-axis over [0,pi/2]?", "expected": "1.57"},
+            {"test_case_id": "TC_APP_INT_019", "description": "Compute the area under the curve y=tan(x) over [0,pi/4]", "prompt": "Compute the area under the curve y=tan(x) over [0,pi/4]", "expected": "0.35"},
+            {"test_case_id": "TC_APP_INT_020", "description": "Find the area between the curves y=2x and y=x^2 over [0,2]", "prompt": "Find the area between the curves y=2x and y=x^2 over [0,2]", "expected": "2.67"},
+            {"test_case_id": "TC_APP_INT_021", "description": "Compute the volume of the solid obtained by revolving y=1/(1+x^2) about the x-axis over [0,1]", "prompt": "Compute the volume of the solid obtained by revolving y=1/(1+x^2) about the x-axis over [0,1]", "expected": "2.00"},
+            {"test_case_id": "TC_APP_INT_022", "description": "What is the work done by the force F(x)=5x over [0,3]?", "prompt": "What is the work done by the force F(x)=5x over [0,3]?", "expected": "22.50"},
+            {"test_case_id": "TC_APP_INT_023", "description": "Find the area under the curve y=sinh(x) over [0,1]", "prompt": "Find the area under the curve y=sinh(x) over [0,1]", "expected": "1.18"},
+            {"test_case_id": "TC_APP_INT_024", "description": "Compute the area under the curve y=cosh(x) over [0,1]", "prompt": "Compute the area under the curve y=cosh(x) over [0,1]", "expected": "1.54"},
+            {"test_case_id": "TC_APP_INT_025", "description": "Find the area between the curves y=1/(1+x^2) and y=x over [0,1]", "prompt": "Find the area between the curves y=1/(1+x^2) and y=x over [0,1]", "expected": "0.45"}
+        ]
     }
 ]
