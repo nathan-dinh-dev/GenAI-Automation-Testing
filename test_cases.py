@@ -7,33 +7,119 @@ test_cases = [
         "cases": [
             {
                 "test_case_id": "TC_DER_001",
-                "description": "Find the derivative of the function F(x) = (x^4 + 3x^2 - 2)^5.",
-                "prompt": "Find the derivative of the function F(x) = (x^4 + 3x^2 - 2)^5.",
-                "expected": "5(x^4+3x^2-2)^4(4x^3+6x)"
+                "description": "Find the slope of the tangent line to the parabola y = 4x - x^2 at the point (1,3).",
+                "prompt": "Find the slope of the tangent line to the parabola y = 4x - x^2 at the point (1,3).",
+                "expected": "2"
             },
             {
                 "test_case_id": "TC_DER_002",
+                "description": "Find an equation of the normal line to the parabola y=x^2-5x+4 that is parallel to the line x-3y=5.",
+                "prompt": "Find an equation of the normal line to the parabola y=x^2-5x+4 that is parallel to the line x-3y=5.",
+                "expected": "x+3y-1=0"
+            },
+            {
+                "test_case_id": "TC_DER_009",
+                "description": "A spherical balloon is being inflated. Find the rate of increase of the surface area (S = 4πr²) with respect to the radius r when r is 1 ft.",
+                "prompt": "A spherical balloon is being inflated. Find the rate of increase of the surface area (S = 4πr²) with respect to the radius r when r is 1 ft.",
+                "expected": "8π"
+            },
+            {
+                "test_case_id": "TC_DER_010",
+                "description": "Find R'(0), where R(x) = (x - 3x^3 + 5x^5) / (1 + 3x^3 + 6x^6 + 9x^9) Hint: Instead of finding R'(x) first, let f(x) be the numerator and g(x) the denominator of R(x) and compute R'(0) from f(0), f'(0), g(0), and g'(0).",
+                "prompt": "Find R'(0), where R(x) = (x - 3x^3 + 5x^5) / (1 + 3x^3 + 6x^6 + 9x^9) Hint: Instead of finding R'(x) first, let f(x) be the numerator and g(x) the denominator of R(x) and compute R'(0) from f(0), f'(0), g(0), and g'(0).",
+                "expected": "1"
+            },
+            {
+                "test_case_id": "TC_DER_011",
+                "description": "Find R'(0), where R(x) = (x - 3x^3 + 5x^5) / (1 + 3x^3 + 6x^6 + 9x^9) Hint: Instead of finding R'(x) first, let f(x) be the numerator and g(x) the denominator of R(x) and compute R'(0) from f(0), f'(0), g(0), and g'(0).",
+                "prompt": "Find R'(0), where R(x) = (x - 3x^3 + 5x^5) / (1 + 3x^3 + 6x^6 + 9x^9) Hint: Instead of finding R'(x) first, let f(x) be the numerator and g(x) the denominator of R(x) and compute R'(0) from f(0), f'(0), g(0), and g'(0).",
+                "expected": "1"
+            },
+            {
+                "test_case_id": "TC_DER_012",
+                "description": "A Cepheid variable star is a star whose brightness alternately increases and decreases. The most easily visible such star is Delta Cephei, for which the interval between times of maximum brightness is 5.4 days. The average brightness of this star is 4.0 and its brightness changes by ±0.35. In view of these data, the brightness of Delta Cephei at time t, where t is measured in days, has been modeled by the function B(t) = 4.0 + 0.35 sin(2πt/5.4). Find the rate of change of the brightness after t days.",
+                "prompt": "A Cepheid variable star is a star whose brightness alternately increases and decreases. The most easily visible such star is Delta Cephei, for which the interval between times of maximum brightness is 5.4 days. The average brightness of this star is 4.0 and its brightness changes by ±0.35. In view of these data, the brightness of Delta Cephei at time t, where t is measured in days, has been modeled by the function B(t) = 4.0 + 0.35 sin(2πt/5.4). Find the rate of change of the brightness after t days.",
+                "expected": "(7/54)π cos(2πt/5.4)"
+            },
+            # {
+            #     "test_case_id": "TC_DER_013",
+            #     "description": "",
+            #     "prompt": "",
+            #     "expected": "L(x) = -10x - 6"
+            # },
+            {
+                "test_case_id": "TC_DER_014",
+                "description": "A runner sprints around a circular track of radius 100 m at a constant speed of 7 m/s. The runner's friend is standing at a distance 200 m from the center of the track. How fast is the distance between the friends changing when the distance between them is 200 m?",
+                "prompt": "A runner sprints around a circular track of radius 100 m at a constant speed of 7 m/s. The runner's friend is standing at a distance 200 m from the center of the track. How fast is the distance between the friends changing when the distance between them is 200 m?",
+                "expected": "(7/4)√15"
+            },
+            {
+                "test_case_id": "TC_DER_015",
+                "description": "Find the derivative of the function using the definition of derivative. State the domain of the function and the domain of its derivative for f(x)=1/2x-1/3",
+                "prompt": "Find the derivative of the function using the definition of derivative. State the domain of the function and the domain of its derivative for f(x)=1/2x-1/3",
+                "expected": """1/2
+(-∞,∞)
+(-∞,∞)"""
+            },
+            {
+                "test_case_id": "TC_DER_016",
                 "description": "Differentiate the constant function f(x) = 2^40.",
                 "prompt": "Differentiate the function f(x) = 2^40.",
                 "expected": "0"
             },
             {
-                "test_case_id": "TC_DER_003",
+                "test_case_id": "TC_DER_017",
                 "description": "Differentiate g(t) = t^3 cos(t).",
                 "prompt": "Differentiate g(t) = t^3 cos(t).",
-                "expected": "3t²cos(t) - t³sin(t)"
+                "expected": "3t^2cos(t) - t^3sin(t)"
             },
             {
-                "test_case_id": "TC_DER_004",
+                "test_case_id": "TC_DER_018",
+                "description": "Use quotient rule to solve f(x)=x/(x+(c/x))",
+                "prompt": "Use quotient rule to solve f(x)=x/(x+(c/x))",
+                "expected": "2cx/(x^2+c)^2"
+            },
+            {
+                "test_case_id": "TC_DER_019",
+                "description": "Find the derivative of the function F(x) = (x^4 + 3x^2 - 2)^5.",
+                "prompt": "Find the derivative of the function F(x) = (x^4 + 3x^2 - 2)^5.",
+                "expected": "10(x^4+3x^2-2)^4(2x^3+3x)"
+            },
+            {
+                "test_case_id": "TC_DER_020",
                 "description": "Find dy/dx by implicit differentiation for x^3 + y^3 = 1.",
                 "prompt": "Find dy/dx by implicit differentiation for x^3 + y^3 = 1.",
-                "expected": "-x²/y²"
+                "expected": "-x^2/y^2"
             },
             {
-                "test_case_id": "TC_DER_005",
+                "test_case_id": "TC_DER_021",
                 "description": "Find the linearization L(x) of the function at a = -1 for f(x) = x^4 + 3x^2.",
                 "prompt": "Find the linearization L(x) of the function at a = -1 for f(x) = x^4 + 3x^2.",
-                "expected": "L(x) = -10x - 6"
+                "expected": "L(x)=-10x-6"
+            },
+            {
+                "test_case_id": "TC_DER_022",
+                "description": "Given a function f(x) = e^(2x), find the second derivative.",
+                "prompt": "Given a function f(x) = e^(2x), find the second derivative.",
+                "expected": "4e^(2x)"
+            },
+            {
+                "test_case_id": "TC_DER_023",
+                "description": "Find the derivative of f(x) = sin(x).",
+                "prompt": "Find the derivative of f(x) = sin(x).",
+                "expected": "cos(x)"
+            },
+            {
+                "test_case_id": "TC_DER_024",
+                "description": "Differentiate f(x)=x^3.",
+                "prompt": "Differentiate f(x)=x^3.",
+                "expected": "3x^2"
+            },
+            {
+                "test_case_id": "TC_DER_025",
+                "description": "Differentiate f(x)=4x^3-2x^2+x-5 using the power rule.",
+                "prompt": "Differentiate f(x)=4x^3-2x^2+x-5 using the power rule.",
+                "expected": "12x^2-4x+1"
             }
         ]
     },
