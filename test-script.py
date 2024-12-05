@@ -14,10 +14,7 @@ load_dotenv()
 
 # Define API keys directly 
 api_keys = [
-    "AIzaSyDxWY8pSzqm1c6ZOGcng4uOF1ab_M1bQQc",
-    "AIzaSyDFUigg66ghr1mGfUtBGH_qhoYZPU_6B2k",
-    "AIzaSyA-BLPRdLiIRWZLiilYptO4Drf0mMuxlMk",
-    "AIzaSyAU7MeKv49F3P1frJkUzTluaCB0w2xNGco"
+   "Gemini keys"
 ]
 
 # Remove any None values in case some environment variables are not set
@@ -46,14 +43,25 @@ preprompts = {
     "Derivatives": (
         "Only provide the exact numerical result, keep 'e' and 'π' as symbolic constants if they appear. "
         "Do not provide explanations."
+        "Don't write like this: 5(x^4 + 3x^2 - 2)^4(4x^3 + 6x) but this: 5(x^4+3x^2-2)^4(4x^3+6x) no space in between"
     ),
-    "Integration": (
+    "Applications of Differentiation": (
         "Only provide the exact numerical result, keep 'e' and 'π' as symbolic constants if they appear. "
         "Do not provide explanations."
+        "No next line"
+        "Should provide answer in single line"
+        "Space after :"
+        "Whenever required: Round the values to decimal points"
+        "Don't write like this: 5(x^4 + 3x^2 - 2)^4(4x^3 + 6x) but this: 5(x^4+3x^2-2)^4(4x^3+6x)"
+        "Maintain this format: Increasing: (-∞, -√2) ∪ (√2, ∞) Decreasing: (-√2, √2) not Increasing:(√2,∞)(-∞,-√2) Decreasing:(-√2,√2)"
+        "Maintain this format: Localmaxima: 0 Localminima: -2, 2 not Localmaxima: 0 Localminima: 2, -2"
+        "Maintain this format: Concave up: (2,∞) Concave down: (-∞,2) Inflection point: 2"
+        "Maintain this format: Concave up: (-∞, -√3/3) ∪ (√3/3, ∞) Concave down: (-√3/3, √3/3) not Concave up: (-∞, -√3/3)∪(√3/3, ∞) Concave down: (-√3/3,√3/3)"
     ),
-    "Applications of Differentiation and Integrals": (
+    "Integrals": (
         "Only provide the exact numerical result, keep 'e' and 'π' as symbolic constants if they appear. "
         "Do not provide explanations."
+        "Don't write like this: 5(x^4 + 3x^2 - 2)^4(4x^3 + 6x) but this: 5(x^4+3x^2-2)^4(4x^3+6x) no space in between and no next line"
     ),
 }
 
