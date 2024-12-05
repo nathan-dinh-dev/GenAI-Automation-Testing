@@ -13,12 +13,13 @@ import re
 load_dotenv()
 
 # Define API keys directly 
-api_keys = [
-   "Gemini keys"
-]
+api_key = ["AIzaSyDxWY8pSzqm1c6ZOGcng4uOF1ab_M1bQQc", 
+           "AIzaSyDFUigg66ghr1mGfUtBGH_qhoYZPU_6B2k",
+           "AIzaSyA-BLPRdLiIRWZLiilYptO4Drf0mMuxlMk",
+           "AIzaSyAU7MeKv49F3P1frJkUzTluaCB0w2xNGco"]
 
 # Remove any None values in case some environment variables are not set
-api_keys = [key for key in api_keys if key]
+api_keys = [key for key in api_key if key]
 
 if not api_keys:
     raise EnvironmentError("No API keys found. Please set them in environment variables or define them directly.")
@@ -213,7 +214,7 @@ for chapter in test_cases:
                     color = Fore.RED
 
                 # Only color the 'Test Passed' or 'Test Failed' text
-                print(f"{color}Test {'Passed' if test_passed else 'Failed'}{Style.RESET_ALL}: {prompt} (Expected: {expected}, Got: {result})")
+                print(f"{color}Test {'Passed' if test_passed else 'Failed'}{Style.RESET_ALL}: {prompt} \n(Expected: {expected}, Got: {result})\n")
 
                 if test_passed:
                     correct_count += 1
